@@ -173,4 +173,3 @@ Inspection records, checklist answers, coordinates, and persisted photos are ava
 
 All screenshots, test outcomes, demonstrations, and spoken explanations submitted for assessment should match the version that was actually run on the student's phone. No simulated screenshot or unperformed test should be presented as evidence.
 
-

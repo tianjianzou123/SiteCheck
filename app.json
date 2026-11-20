@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "SiteCheck",
+    "slug": "sitecheck",
+    "scheme": "sitecheck",
+    "version": "1.3.0",
+    "orientation": "portrait",
+    "icon": "./assets/sitecheck-icon-1024.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "buildNumber": "1"
+    },
+    "android": {
+      "package": "com.kttcd.sitecheck",
+      "versionCode": 6,
+      "adaptiveIcon": {
+        "backgroundColor": "#071B55",
+        "foregroundImage": "./assets/sitecheck-adaptive-foreground-1024.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/sitecheck-icon-1024.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-status-bar",
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Allow SiteCheck to photograph outdoor facility inspections and issues.",
+          "photosPermission": "Allow SiteCheck to access selected inspection photos.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allow SiteCheck to record the current position of an outdoor facility inspection.",
+          "isIosBackgroundLocationEnabled": false,
+          "isAndroidBackgroundLocationEnabled": false,
+          "isAndroidForegroundServiceEnabled": false
+        }
+      ],
+      "expo-font",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "enableMinifyInReleaseBuilds": false
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "8fbdbe5f-06b8-4819-88c8-6cc3cf33e2bf"
+      }
+    }
+  }
+}
