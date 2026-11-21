@@ -2,7 +2,7 @@
 
 This document records the final regression performed on the actual demonstration
 iPhone. Results describe what was observed on the phone. Fields that were not captured
-during the session are labelled **Not recorded** rather than left as pending.
+during the session are labelled **Not recorded** rather than inferred.
 
 ## Test environment
 
