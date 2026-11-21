@@ -135,8 +135,19 @@ Current version `1.3.0` source validation completed on 20 November 2026:
 - Legacy version 3 records are migrated in memory to the version 4 inspection-outcome model
 
 These checks prove that the source is well formed and can be bundled for iOS. They do
-**not** prove real camera or GPS behaviour and do not replace the iPhone tests in
-`docs/TEST_PLAN.md`.
+not replace physical-device testing. A separate real-iPhone regression was completed
+and is recorded in `docs/TEST_PLAN.md`.
+
+## Real iPhone verification
+
+The current SiteCheck workflow was tested in Expo Go on a real iPhone on
+20 November 2026. The completed regression covered camera capture, foreground GPS,
+create/read/update/delete operations, map markers, photo persistence, and a full
+force-close and relaunch check. The saved inspection record and its photo remained
+available after Expo Go was removed from the iOS app switcher and opened again.
+
+The detailed T01–T21 results are recorded in `docs/TEST_PLAN.md`. The coursework
+presentation and Part B demonstration use evidence from this physical-device test.
 
 ## Permissions
 
@@ -156,15 +167,13 @@ Inspection records, checklist answers, coordinates, and persisted photos are ava
 - AsyncStorage is not encrypted and must not be used for secrets.
 - Map tiles may require internet access.
 - GPS accuracy depends on the phone, environment, and satellite/network availability.
-- Photo, GPS, permission refusal, restart persistence, and map behaviour still require documented iPhone testing.
-- iOS cannot be locally simulated from this Windows computer; Expo Go on the borrowed iPhone is required.
+- The exact iPhone model, iOS version, and Expo Go version were not recorded in the final test log.
 - `npm audit` currently reports three moderate `minimatch` advisories through Expo's fingerprint dependency; its proposed forced fix would downgrade Expo across major SDK versions, so no unsafe forced change was applied.
-- Actual screenshots will be added only after the relevant screens are run and captured on the test phone.
 
 ## Coursework evidence
 
 - Requirement mapping: `docs/COURSEWORK_MAPPING.md`
-- Physical-device and exception test record: `docs/TEST_PLAN.md`
+- Completed physical-device and exception test record: `docs/TEST_PLAN.md`
 - iPhone setup and evidence guide: `docs/IPHONE_TEST_GUIDE.md`
 - Honest Git/GitHub next steps: `docs/GIT_AND_GITHUB_NEXT_STEPS.md`
 - Technical questions and explanations: `docs/TECHNICAL_QA.md`
